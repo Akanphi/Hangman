@@ -13,7 +13,7 @@ SRCS	=	src/main.c	\
 
 OBJS	= $(SRCS:.c=.o)
 
-BINARY = daxflight
+BINARY = hangman
 
 all: $(BINARY)
 
