@@ -1,0 +1,37 @@
+/*
+** EPITECH PROJECT, 2023
+** B-PSU-200-COT-2-1-minishell1-jordan.amouzoun
+** File description:
+** unit_test.c
+*/
+
+#include "../my.h"
+
+Test(flag_string, encrypt_string)
+{
+    int a = flag_string("papa", 6);
+
+    cr_assert_eq(a, 0);
+}
+
+Test(flag_file, encrypt_file)
+{
+    int a = flag_string("lolo", 6);
+
+    cr_assert_eq(a, 0);
+}
+
+Test(verif_alph, verify_character)
+{
+    int a = verif_alph('j', 0, 'a', 'z');
+
+    cr_assert_eq(a, 'j');
+}
+
+Test(cesar, encrypt)
+{
+    char *str = cesar("Jordan", 0);
+
+    cr_assert_str_eq("Jordan", str);
+    free(str);
+}
